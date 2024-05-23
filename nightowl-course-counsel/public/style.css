@@ -1,0 +1,394 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45vw;
+    height: 85vh;
+    margin-top:20px;
+}
+
+.message {
+    font-size:20px;
+    color: rgb(255, 255, 255); /* 修改消息文本颜色为浅灰色 */
+    margin-bottom:15px;
+}
+
+.message strong {
+    display: inline-block;
+    width: 90px; /* 调整发送者名称的宽度 */
+    text-align: right; /* 文本右对齐 */
+    margin-right: 10px; /* 增加右边距 */
+}
+
+.message:last-child {
+    margin-bottom: 0; /* 最后一条消息不添加底部间距 */
+}
+
+.hidden {
+    display: none;
+}
+
+.nightowl-tittle {
+    color: #ffffff; /* 修改文字颜色为白色 */
+}
+
+.fa-outdent {
+    color: #ffffff; /* 修改图标颜色为白色 */
+}
+
+.chat-box {
+    width: 150%; /* 聊天框宽度占父容器的90% */
+    height: 70%; /* 聊天框高度占父容器的70% */
+    flex-grow: 1;
+    overflow-y: auto; /* 添加垂直滚动条 */
+}
+
+    
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* 增加边框半径 */
+    margin-right: 1px; /* 与按钮之间的间距 */
+    outline: none;
+    width:600px;
+    font-size:16px;
+    height:50px;
+    border-radius: 15px;
+    
+}
+
+
+
+#send-btn {
+    font-size: medium;
+    width: 50px; /* 让按钮占据 20%，留出 10px 间距给输入框 */
+    height:50px;
+    padding: 10px; /* 调整按钮的内边距 */
+    border: none;
+    border-radius: 20px; /* 增加边框半径 */
+    cursor: pointer;
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+#user-input::placeholder {
+    text-indent: 10px; /* 设置文本缩进为 10px */
+}
+
+#send-btn:hover {
+    background-color: #20222a; /* 悬停时的背景颜色 */
+    color:white;
+}
+
+#user-input::placeholder {
+    text-indent: 15px; /* 调整占位符文本缩进 */
+}
+ 
+
+
+/*对话模式*/
+.message-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+/* 调整消息内容容器的样式，使其成为 flex 容器 */
+.message-content {
+    display: flex;
+    align-items: center;
+}
+
+/* 调整发送者名称的样式 */
+.message-content p {
+    margin-left: 10px; /* 添加左边距，与头像之间留出一些空间 */
+    font-weight: bold; /* 设置字体加粗 */
+    margin-bottom: 5px; /* 在名字下方留出一些空间 */
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*sidebar*/
+
+body {
+    /* 宽度占浏览器可视区域的宽度 */
+    width: 100vw;
+    /* 设置背景颜色 */
+    background-color: #333; /* 如果背景图片加载失败，将显示这个颜色 */
+    /* 设置文字颜色 */
+    color: #ffffff; /* 文字颜色为浅灰色 */
+    /* 设置背景图片 */
+    background-image: url('background.jpg'); /* 将 'background.jpg' 替换为实际图片文件的路径 */
+    background-size: cover; /* 背景图片覆盖整个视口 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+}
+
+
+
+.navbar {
+    /* 相对定位 */
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    /* 盒子阴影 */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar input {
+    /* 隐藏元素 */
+    display: none;
+}
+.navbar label {
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 200px;
+    font-size: 20px;
+    color: #666;
+    padding-left: 20px;
+    cursor: pointer;
+    /* 加过渡 */
+    transition: all 0.5s;
+}
+.navbar ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    /* 高度占浏览器可视区域的高度 */
+    height: 100vh;
+    background-color: #20222a;
+    transition: all 0.5s;
+}
+
+.navbar ul li a img {
+    border-radius: 50%; /* 将图标设置为圆形 */
+    width: 40px; /* 设置宽度 */
+    height: 40px; /* 设置高度 */
+    margin-right: 10px; /* 添加右边距 */
+}
+
+.night-tittle{
+    font-size:24px;
+    color:black;
+    font-weight:600;
+}
+.navbar ul li {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 10px;
+}
+.navbar ul li:first-child {
+    /* 弹性布局 让图片和文字垂直+水平居中于盒子内 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 改变了盒子的主轴方向 让两个元素垂直排列 */
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+.navbar ul li:first-child img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+
+.navbar ul li:first-child span {
+    color: #fff;
+    font-size: 20px;
+    /* 禁止文字换行 */
+    white-space: nowrap;
+}
+.navbar ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #d2d2d2;
+    /* 取消a标签的下划线 */
+    text-decoration: none;
+    /* 现在盒子内直接定义好左边框 不过颜色为透明色也就看不见 */
+    border-left: 6px solid transparent;
+}
+.navbar ul li a i {
+    font-size: 20px;
+    margin: 0 15px;
+}
+.navbar ul li a span {
+    font-size: 18px;
+}
+.navbar ul li a:hover {
+    color: #fff;
+    /* 这样文字和图标会被带跑不太好看 解决办法很简单 */
+    /* 然后鼠标放上去变颜色就可以了 */
+    border-left-color: #fb7299;
+}
+.navbar input:checked + label {
+    left: 0;
+}
+.navbar input:checked + label i {
+    /* 沿着y轴旋转180度 */
+    transform: rotateY(180deg);
+}
+.navbar input:checked ~ ul {
+    left: -200px;
+}
+
+
+
+
+
+
+
+
+/*inner*/
+
+
+
+
+.inner{
+    position:absolute;
+    top:-5px;
+    right:20px;
+    background:#333;
+    color:#fff;
+    padding:1em;
+    width:200px;
+    border-radius:10px;
+    clip-path:circle(7% at 90% 18%);
+    transition:.5s ease-in-out;
+}
+
+.inner h1{
+    font-size:18px;
+    color:white;
+}
+
+.inner a:hover  {
+    color: #FFA500; /* 修改链接颜色为橙色 */
+}
+
+.inner a{
+    color: #3498db; /* 修改链接悬停时的颜色 */
+}
+
+.inner span {
+    float: right;
+    font-weight: 550;
+    font-size: 17px;
+    line-height: 12px;
+    margin-right: 2px; /* 负值调整i图标位置 */
+    margin-top: 3px; /* 负值调整i图标位置 */
+    transition: color 0.5s;
+}
+
+.inner p{
+    font-size:0.9em;
+}
+
+.inner:hover{
+    clip-path:circle(75%);
+    background:#555;
+}
+
+.inner:hover span{
+    color:rgba(255, 255, 255, 0);
+}
+
+.modal {
+    display: none;
+    position: fixed; /* 将模态框固定在屏幕上 */
+    z-index: 1;
+    left: 50%; /* 将模态框水平居中 */
+    top: 50%; /* 将模态框垂直居中 */
+    transform: translate(-50%, -50%); /* 使用 transform 属性进行居中 */
+    width: 80%; /* 设置模态框的宽度 */
+    max-width: 700px;
+    height: 100%;
+    max-height: 80%;
+    overflow-y: auto; /* 添加垂直滚动条 */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* 让模态框水平居中 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* 设置内容宽度 */
+    max-width: 700px;
+    height: auto;
+    max-height: 100%; /* 使模态框高度自适应内容 */
+    border-radius: 20px;
+    overflow-y: auto; /* 添加垂直滚动条 */
+}
+
+
+
+
+.modal-content h2, .modal-content p {
+    color: black; /* 修改字体颜色为黑色 */
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.loading-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #367fdf;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: loading-animation 1s infinite ease-in-out;
+}
+
+
+@keyframes loading-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

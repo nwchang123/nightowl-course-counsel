@@ -1,0 +1,16 @@
+{
+  "name": "nightowl-course-counsel",
+  "version": "1.0.0",
+  "description": "A chatbot service using FastGPT API for course counseling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "NightOwl Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+  }
+}

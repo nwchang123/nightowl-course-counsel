@@ -1,0 +1,92 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS COURSE COUNSEL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">
+            <i class="fa fa-outdent"></i>
+            <span class="nightowl-tittle">NightOwl Course Councel</span>
+        </label>
+        <ul>
+            <li>
+                <img src="image.jpg" alt="NightOwl Logo" />
+                <span>-UTS Course Counsel-</span>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="fa fa-home"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="teamlogo.jpg" alt="NightOwl Logo" width="40" height="40">
+                    <span>About Us</span>
+                </a>
+            </li>                    
+        </ul>
+    </div>
+
+    <section class="inner">
+        <span>i</span>
+        <h1>Notes</h1>
+        <p>Course counsel can help you to choose your dream course. If you have any questions, you can <a href="#" id="contact-link">click here</a>.</p>
+    </section>
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- 对话消息将动态添加到这里 -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div id="about-us-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About NightOwl Course Counsel</h2>
+            <p>NightOwl Course Counsel is a course chatbot powered by the AI of ChatGPT 3.5 Turbo. It serves as a comprehensive resource for students seeking information about various courses. Our primary goal is to assist students in quickly finding their ideal courses.</p>
+            <br>
+            <h2>Our Mission</h2>
+            <p>At NightOwl, our mission is to empower students to make informed decisions about their education. We believe that every student deserves access to quality guidance and support as they embark on their educational journey.</p>
+            <br>
+            <h2>Our Team</h2>
+            <p>Night Owl is the name of our team, consisting of three dedicated developers. This website is the result of an assignment undertaken by Computer Science students at the University of Technology Sarawak.</p>
+            <br>
+            <h2>Our Commitment</h2>
+            <p>We are committed to providing our services free of charge. You don't have to pay anything to benefit from our website.</p>
+            <br>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or concerns about the website, please feel free to contact us.</p>
+            <br>
+            <p>Email: nightowlcounsel@gmail.com</p>
+        </div>
+    </div>
+    
+    <div id="contact-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>UTS Website</h2>
+            <br> 
+            <p>If you have any questions, please go to the UTS official website</p>
+            <p>https://www.uts.edu.my/</p>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
